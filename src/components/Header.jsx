@@ -5,7 +5,7 @@ function Header({ toggleThemeHandler }) {
   return (
     <header>
       <div>
-        <img src="images/TODO 2.png" alt="logo" className="logo" />
+        <img src={process.env.PUBLIC_URL + "/images/TODO 2.png"} alt="logo" className="logo" />
         <h1>todo</h1>
       </div>
       <label className="theme-switch">
