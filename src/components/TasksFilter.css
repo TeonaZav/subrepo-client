@@ -1,0 +1,154 @@
+.container {
+  display: flex;
+  width: 32.7rem;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.theme-switch-input {
+  display: none;
+}
+
+.check {
+  display: none;
+}
+input[type="radio"] {
+  position: absolute;
+  visibility: hidden;
+  cursor: pointer;
+}
+
+.check-label {
+  position: relative;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  letter-spacing: -0.19px;
+  font-weight: 700;
+  color: #9495a5;
+  cursor: pointer;
+}
+
+input[type="radio"]:hover ~ span {
+  color: #494c6b;
+}
+
+input[type="radio"]:checked ~ span {
+  color: #3a7cfd;
+}
+.check-label:not(:last-child) {
+  margin-right: 1.8rem;
+}
+
+.filter-btn-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.filter-btn-container,
+.item-left-delete,
+.filter-form {
+  width: 32.7rem;
+  background-color: var(--task-color);
+  border-radius: 0.5rem;
+  box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.5);
+  transition: background 0.2s;
+}
+
+.item-left-delete {
+  height: 5rem;
+  position: relative;
+}
+.items-left {
+  position: absolute;
+  left: 2rem;
+  bottom: 2rem;
+}
+.clear-completed {
+  position: absolute;
+  right: 2rem;
+  bottom: 2rem;
+  cursor: pointer;
+}
+.items-left,
+.clear-completed {
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  letter-spacing: -0.17px;
+  font-weight: 400;
+  color: #9495a5;
+}
+
+.item-left-delete {
+  display: flex;
+}
+.filter-form {
+  height: 4.8rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.6rem;
+}
+.filter-btn-container {
+  height: 4.8rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* more than 1440PX (for desktop )*/
+@media (min-width: 90em) {
+  .container {
+    width: 54rem;
+  }
+  .filter-btn-list li {
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    letter-spacing: -0.19px;
+    font-weight: 700;
+    color: #9495a5;
+  }
+
+  .filter-btn-container,
+  .item-left-delete {
+    width: 54rem;
+  }
+  .item-left-delete {
+    height: 5rem;
+  }
+  .filter-btn-container {
+    position: relative;
+  }
+
+  .items-left {
+    position: absolute;
+    left: 2.4rem;
+    bottom: 2rem;
+  }
+  .clear-completed {
+    position: absolute;
+    right: 2.4rem;
+    bottom: 2rem;
+    cursor: pointer;
+  }
+  .filter-form {
+    display: contents;
+  }
+  .filter-container {
+    position: absolute;
+    left: 35%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .items-left,
+  .clear-completed {
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    letter-spacing: -0.19px;
+  }
+
+  .filter-btn-container {
+    height: 5rem;
+  }
+}

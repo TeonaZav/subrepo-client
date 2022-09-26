@@ -1,0 +1,16 @@
+footer {
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  text-align: center;
+  letter-spacing: -0.19px;
+  color: #9495a5;
+  margin-top: 10.4rem;
+}
+
+/* more than 1440PX (for desktop )*/
+@media (min-width: 90em) {
+  footer {
+    margin-top: 4.9rem;
+  }
+}
