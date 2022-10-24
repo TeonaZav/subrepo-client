@@ -50,7 +50,7 @@ function App() {
   //------ GET TASKS FROM POSGRESS DATABASE ------//
   const getSavedTodos = async (id) => {
     try {
-      const response = await fetch("http://localhost:5000/todos");
+      const response = await fetch("https://todoserver123.onrender.com/todos");
       const data = await response.json();
       setTasks((prevTasks) => {
         return data.map((task) => {
@@ -76,7 +76,7 @@ function App() {
   //---------- DELETE COMPETED TASKS ----------//
   const deleteHandler = async (e) => {
     try {
-      const toDelete = await fetch(`http://localhost:5000/todos`, {
+      const toDelete = await fetch(`https://todoserver123.onrender.com/todos`, {
         method: "DELETE",
       });
 
