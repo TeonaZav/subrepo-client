@@ -28,7 +28,7 @@ function TodoList({ tasks, setTasks, filteredTasks, getSavedTodos }) {
       });
     });
     const body = { status };
-    const toUpdate = await fetch(`http://localhost:5000/todos/${id}`, {
+    const toUpdate = await fetch(`https://todoserver123.onrender.com/todos/${id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(body),
@@ -38,7 +38,7 @@ function TodoList({ tasks, setTasks, filteredTasks, getSavedTodos }) {
   const targetDeleteHandler = async (id) => {
     getSavedTodos();
     try {
-      const toDelete = await fetch(`http://localhost:5000/todos/${id}`, {
+      const toDelete = await fetch(`https://todoserver123.onrender.com/todos/${id}`, {
         method: "DELETE",
       });
       setTasks(tasks.filter((task) => task.id !== id));
